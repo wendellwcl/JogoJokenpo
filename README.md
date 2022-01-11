@@ -1,0 +1,1 @@
+Jogo: Jokenpo (pedra, papel, tesoura) ; página dinâmica focada na experiência do usuário tanto visualmente quanto funcionalmente

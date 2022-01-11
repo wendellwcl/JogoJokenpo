@@ -1,0 +1,185 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:wght@100;300;400;900&display=swap');
+
+html, body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(-45deg, #FF7801, #FF3880);
+    font-family: sans-serif;
+    font-size: 16px;
+    z-index: -100;
+}
+
+body::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(../img/textura-bg.png);
+    mix-blend-mode: soft-light;
+    opacity: 0.2;
+    z-index: -50;
+}
+
+/*Container principal
+-----------------------------------------------------------------------------------*/
+.container{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/*Titulo
+-----------------------------------------------------------------------------------*/
+h1{
+    color: #F4F4F4;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 5rem;
+    text-shadow: 0px 3px #3A76FB, 0px 6px #1C1F26;
+}
+
+p{
+    color: #F4F4F4;
+    font-size: 1rem;
+    font-weight: bold;
+    text-shadow: 0px 1px #3A76FB, 0px 2px #1C1F26;
+}
+
+/* Container do jogo
+-----------------------------------------------------------------------------------*/
+.campo{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 20%;
+}
+
+/* Container opções
+-----------------------------------------------------------------------------------*/
+.opcoes{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    perspective: 150px;
+    position: relative;
+}
+
+/* Itens do jogador
+-----------------------------------------------------------------------------------*/
+.item, #item-adversario{
+    width: 100px;
+    height: 100px;
+    background: #FEDFC2;
+    border-radius: 25px;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.item:hover{
+    box-shadow: 0px 0px 5px 3px #C6F851;
+}
+
+.item img, #item-adversario img{
+    width: 100%;
+}
+
+#item-adversario-img{
+    opacity: 0;
+}
+
+/* Jogo
+-----------------------------------------------------------------------------------*/
+.jogo{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Placar
+-----------------------------------------------------------------------------------*/
+.placar{
+    height: 50px;
+    background: #F4F4F4;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.placar span{
+    width: 50px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: "Curser Marker", cursive;
+    text-align: center;
+}
+
+.placar span:nth-child(2){
+    height: 100%;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: "Curser Marker", cursive;
+    line-height: 50px;
+    background: #3A76FB;
+    color: #F4F4F4;
+}
+
+/* Botão jogar
+-----------------------------------------------------------------------------------*/
+button{
+    margin-top: 50px;
+    padding: 10px 30px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: none;
+    background: none;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    transition: all .5s;
+}
+
+button:hover{
+    color: #F4F4F4;
+}
+
+button::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #3A76FB;
+    transform: rotateY(90deg);
+    transition: all .5s;
+    z-index: -1;
+}
+
+button:hover::before{
+    transform: rotateY(0deg);
+}
+
+button::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #F4F4F4;
+    z-index: -2;
+}

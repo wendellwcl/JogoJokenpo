@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JoKenPô</title>
+        <!-- Css -->
+        <link rel="stylesheet" href="css/estilo.css">
+    </head>
+    <body onload="placar()">
+        <!-- container principal-->
+        <div class="container">
+            <!-- titulo / introdução -->
+            <h1>JoKenPô</h1>
+            <p>clique em uma opção para jogar</p>
+            <!-- campo jogo -->
+            <div class="campo">
+                <!-- campo jogador -->
+                <div class="opcoes">
+                    <div class="item" onclick="jogar('pedra')" id="pedra">
+                        <img src="img/pedra.png" alt="pedra">
+                    </div>
+                    <div class="item" onclick="jogar('papel')" id="papel">
+                        <img src="img/papel.png" alt="papel">
+                    </div>
+                    <div class="item" onclick="jogar('tesoura')" id="tesoura">
+                        <img src="img/tesoura.png" alt="tesoura">
+                    </div>
+                </div>
+                <!-- informação do jogo -->
+                <div class="jogo">
+                    <div class="placar">
+                        <span id="pontosJogador"></span>
+                        <span>VS</span>
+                        <span id="pontosAdversario"></span>
+                    </div>
+                    <button onclick="zerar()" id="zerar">zerar pontos</button>
+                </div>
+                <!-- campo adversário -->
+                <div class="opcoes">
+                   <div id="item-adversario"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <!-- script -->
+    <script src="js/script.js"></script>
+</html>
